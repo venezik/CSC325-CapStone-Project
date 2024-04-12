@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="newCenterContent" prefHeight="638.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+    <children>
+        <VBox prefHeight="638.0" prefWidth="995.0">
+         <children>
+            <HBox prefHeight="278.0" prefWidth="995.0">
+               <children>
+                  <Pane prefHeight="278.0" prefWidth="323.0">
+                     <children>
+                        <Button fx:id="iphone23" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" prefHeight="191.0" prefWidth="194.0" styleClass="xboxs" stylesheets="@styles.css" />
+                        <Label layoutX="92.0" layoutY="205.0" prefHeight="31.0" prefWidth="139.0" text="Xbox Series S">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="123.0" layoutY="241.0" text="\$299.99">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="278.0" prefWidth="323.0">
+                     <children>
+                        <Button fx:id="iphone2" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" prefHeight="191.0" prefWidth="194.0" styleClass="sonyheadphones" stylesheets="@styles.css" />
+                        <Label layoutX="71.0" layoutY="205.0" prefHeight="31.0" prefWidth="183.0" text="Sony WH-1000XM5">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="124.0" layoutY="236.0" text="\$399.99">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="278.0" prefWidth="323.0">
+                     <children>
+                        <Button fx:id="iphone1" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" prefHeight="191.0" prefWidth="194.0" styleClass="ps5" stylesheets="@styles.css" />
+                        <Label layoutX="96.0" layoutY="205.0" prefHeight="31.0" prefWidth="132.0" text="Playstation 5">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="122.0" layoutY="236.0" text="\$439.99">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+        </VBox>
+    </children>
+</AnchorPane>
