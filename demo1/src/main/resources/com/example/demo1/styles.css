@@ -1,0 +1,212 @@
+/* styles.css */
+.shadow {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 4, 4); /* Adjust values as needed */
+}
+
+.Pane {
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 4, 4); /* Adjust values as needed */
+    -fx-background-color: pink;
+}
+
+/*.button{
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-color: white;
+
+
+}*/
+
+.button:hover {
+    -fx-background-color: white; /* Color when hovered */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 4, 4); /* Adjust values as needed */
+
+}
+
+.pane{
+    -fx-background-image: url('gorams.png'); /* Replace 'path_to_your_image.png' with the path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat;
+    -fx-opacity: .5;
+    -fx-background-position: center; /* Center the background image */
+}
+
+
+.button-with-image {
+    -fx-background-image: url('image-removebg-preview.png'); /* Replace 'path_to_your_image.png' with the path to your image */
+    -fx-background-size: cover; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-radius: 0;
+}
+
+
+.iphone {
+    -fx-background-image: url('iphone15-removebg-preview.png'); /* Replace 'path_to_your_image.png' with the path to your image */
+    -fx-background-size: cover; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+
+}
+
+.ps5{
+    -fx-background-image: url('ps5.png'); /* Replace 'path_to_your_image.png' with the path to your image */
+    -fx-background-size: cover; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+
+
+}
+
+.ps5{
+    -fx-background-image: url('ps5.png'); /* Replace 'path_to_your_image.png' with the path to your image */
+    -fx-background-size: cover; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+
+
+}
+
+.sonyheadphones{
+    -fx-background-image: url('sonyheadphones-removebg-preview.png'); /* Replace 'path_to_your_image.png' with the path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-position: center; /* Center the background image */
+
+
+}
+
+.xboxx{
+    -fx-background-image: url('xboxx-removebg-preview.png'); /* Replace 'path_to_your_image.png' with the path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-position: center; /* Center the background image */
+
+
+}
+
+.microsoftpro{
+    -fx-background-image: url('microsoftpro-removebg-preview.png'); /* Replace 'path_to_your_image.png' with the path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-position: center; /* Center the background image */
+
+
+}
+
+.pixel{
+    -fx-background-image: url("pixel-removebg-preview.png"); /* Replace 'path_to_your_image.png' with the path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-position: center; /* Center the background image */
+
+
+}
+
+.googlebuds{
+    -fx-background-image: url("googleBuds-removebg-preview.png"); /* Replace 'path_to_your_image.png' with tgohe path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-position: center; /* Center the background image */
+
+
+}
+
+.sonyphone{
+    -fx-background-image: url("Sonyphone-removebg-preview.png"); /* Replace 'path_to_your_image.png' with tgohe path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-position: center; /* Center the background image */
+
+
+}
+
+
+.appleheadphones{
+    -fx-background-image: url("appleheadphones.png"); /* Replace 'path_to_your_image.png' with tgohe path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-position: center; /* Center the background image */
+
+
+}
+
+.googlepixelbook{
+    -fx-background-image: url("googlegolaptop-removebg-preview.png"); /* Replace 'path_to_your_image.png' with tgohe path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-position: center; /* Center the background image */
+
+
+}
+
+.xboxs{
+    -fx-background-image: url("xboxs-removebg-preview.png"); /* Replace 'path_to_your_image.png' with tgohe path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-position: center; /* Center the background image */
+
+
+}
+
+.macbook{
+    -fx-background-image: url("macbook.png"); /* Replace 'path_to_your_image.png' with tgohe path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-color: #f4f4f4; /* Set background color to transparent */
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-position: center; /* Center the background image */
+
+
+}
+
+
+.profileicon{
+    -fx-background-image: url('image.png'); /* Replace 'path_to_your_image.png' with the path to your image */
+    -fx-background-size: contain; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-radius: 0;
+
+}
+
+.rounded-corner {
+    width: 200px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    background-color: black; /* Adjust as needed */
+    border-radius: 10px; /* Adjust the radius value to make corners more or less round */
+}
+
+.imageadd {
+    -fx-background-image: url('trash.png'); /* Replace 'path_to_your_image.png' with the path to your image */
+    -fx-background-size: cover; /* Adjust image size to cover the button */
+    -fx-background-repeat: no-repeat; /* Prevent image repetition */
+    -fx-background-radius: 0;
+}
+
+
+
+
+
+
+
+
+

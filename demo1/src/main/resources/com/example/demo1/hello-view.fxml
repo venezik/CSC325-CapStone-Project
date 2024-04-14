@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1438.0" prefWidth="1200.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+   <top>
+      <Pane prefHeight="154.0" prefWidth="846.0" style="-fx-background-color: #064d45;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="152.0" fitWidth="245.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@download.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="462.0" layoutY="8.0" style="-fx-text-fill: white;" text="FSC SHOP" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="95.0" />
+               </font>
+            </Label>
+            <Button fx:id="cart" layoutX="1107.0" layoutY="51.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="59.0" style="-fx-background-color: #064d45;" styleClass="button-with-image" stylesheets="@styles.css" />
+            <Button fx:id="logInPage" layoutX="1017.0" layoutY="51.0" mnemonicParsing="false" onAction="#setLogInPage" prefHeight="53.0" prefWidth="66.0" style="-fx-background-color: #064d45; -fx-background-radius: 0;" text="Log in" textFill="WHITE" />
+            <Button fx:id="signUp" layoutX="951.0" layoutY="51.0" mnemonicParsing="false" onAction="#setSignUpPage" prefHeight="53.0" prefWidth="66.0" style="-fx-background-color: #064d45; -fx-background-radius: 0;" text="Sign up" textFill="WHITE" />
+         </children></Pane>
+   </top>
+   <left>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="55.0" layoutY="30.0" text="Filter">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="89.0" text="Price:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="262.0" text="Category">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="439.0" text="Brands">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="checkBox1" layoutX="14.0" layoutY="124.0" mnemonicParsing="false" onAction="#priceFilter1" text="\$0-$100" />
+            <CheckBox fx:id="checkBox2" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#priceFilter2" text="\$100-$500" />
+            <CheckBox fx:id="checkBox3" layoutX="14.0" layoutY="174.0" mnemonicParsing="false" onAction="#priceFilter3" text="\$500-$1000" />
+            <CheckBox fx:id="checkBox4" layoutX="14.0" layoutY="199.0" mnemonicParsing="false" onAction="#priceFilter3" text="\$1,000-$3,000" />
+            <CheckBox fx:id="checkBox5" layoutX="13.0" layoutY="297.0" mnemonicParsing="false" onAction="#priceFilter3" text="Phones" />
+            <CheckBox fx:id="checkBox6" layoutX="13.0" layoutY="322.0" mnemonicParsing="false" onAction="#priceFilter3" text="Laptops" />
+            <CheckBox fx:id="checkBox7" layoutX="13.0" layoutY="347.0" mnemonicParsing="false" onAction="#priceFilter3" text="Consoles" />
+            <CheckBox fx:id="checkBox8" layoutX="13.0" layoutY="372.0" mnemonicParsing="false" onAction="#priceFilter3" text="Headphones" />
+            <CheckBox fx:id="checkBox9" layoutX="12.0" layoutY="474.0" mnemonicParsing="false" onAction="#priceFilter3" text="Headphones" />
+            <CheckBox fx:id="checkBox10" layoutX="12.0" layoutY="499.0" mnemonicParsing="false" onAction="#priceFilter3" text="Google" />
+            <CheckBox fx:id="checkBox11" layoutX="12.0" layoutY="524.0" mnemonicParsing="false" onAction="#priceFilter3" text="Microsoft" />
+            <CheckBox fx:id="checkBox12" layoutX="12.0" layoutY="549.0" mnemonicParsing="false" onAction="#priceFilter3" text="Sony" />
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane fx:id="originalCenterContent" prefHeight="1366.0" prefWidth="1000.0">
+         <children>
+            <ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" maxHeight="1224.0" minViewportHeight="638.0" prefHeight="440.0" prefViewportHeight="638.0" prefWidth="1000.0" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+               <content>
+                  <Pane prefHeight="1280.0" prefWidth="989.0">
+                     <children>
+                        <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="1284.0" prefWidth="995.0">
+                           <children>
+                              <HBox prefHeight="278.0" prefWidth="995.0">
+                                 <children>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button fx:id="iphone" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openIphonePopup" prefHeight="191.0" prefWidth="194.0" styleClass="iphone" stylesheets="@styles.css" />
+                                          <Label layoutX="112.0" layoutY="205.0" prefHeight="31.0" prefWidth="101.0" text="Iphone 15">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="123.0" layoutY="236.0" text="\$799.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button fx:id="iphone1" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openPsPopup" prefHeight="191.0" prefWidth="194.0" styleClass="ps5" stylesheets="@styles.css" />
+                                          <Label layoutX="96.0" layoutY="205.0" prefHeight="31.0" prefWidth="132.0" text="Playstation 5">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="122.0" layoutY="236.0" text="\$439.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button fx:id="iphone2" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openSonyHeadphonePopUp" prefHeight="191.0" prefWidth="194.0" styleClass="sonyheadphones" stylesheets="@styles.css" />
+                                          <Label layoutX="71.0" layoutY="205.0" prefHeight="31.0" prefWidth="183.0" text="Sony WH-1000XM5">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="124.0" layoutY="236.0" text="\$399.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="278.0" prefWidth="995.0">
+                                 <children>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openXboxXPopUp" prefHeight="191.0" prefWidth="194.0" styleClass="xboxx" stylesheets="@styles.css" fx:id="xboxx" />
+                                          <Label layoutX="90.0" layoutY="205.0" prefHeight="31.0" prefWidth="143.0" text="Xbox Series X">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="123.0" layoutY="236.0" text="\$449.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button fx:id="iphone11" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openSurfacePopup" prefHeight="191.0" prefWidth="194.0" styleClass="microsoftpro" stylesheets="@styles.css" />
+                                          <Label layoutX="40.0" layoutY="205.0" prefHeight="31.0" prefWidth="244.0" text="Surface Laptop Studio 2">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="117.0" layoutY="236.0" text="\$1,899.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button fx:id="iphone21" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openPixelPopUp" prefHeight="191.0" prefWidth="194.0" styleClass="pixel" stylesheets="@styles.css" />
+                                          <Label layoutX="86.0" layoutY="206.0" prefHeight="31.0" prefWidth="164.0" text="Google Pixel 7">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="129.0" layoutY="237.0" text="\$699.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="278.0" prefWidth="995.0">
+                                 <children>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button fx:id="buds" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openBudsPopUp" prefHeight="191.0" prefWidth="194.0" styleClass="googlebuds" stylesheets="@styles.css" />
+                                          <Label layoutX="47.0" layoutY="205.0" prefHeight="31.0" prefWidth="231.0" text="Google Pixels Buds Pro">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="123.0" layoutY="236.0" text="\$199.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button fx:id="iphone12" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openAirpodsPopUp" prefHeight="191.0" prefWidth="194.0" styleClass="appleheadphones" stylesheets="@styles.css" />
+                                          <Label layoutX="99.0" layoutY="211.0" prefHeight="31.0" prefWidth="125.0" text="AirPods Max">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="123.0" layoutY="242.0" text="\$549.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button fx:id="iphone22" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openPixelbookPopUp" prefHeight="191.0" prefWidth="194.0" styleClass="googlepixelbook" stylesheets="@styles.css" />
+                                          <Label layoutX="59.0" layoutY="205.0" prefHeight="31.0" prefWidth="207.0" text="Google Pixelbook Go">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="114.0" layoutY="236.0" text="\$1,149.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="278.0" prefWidth="995.0">
+                                 <children>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button fx:id="macbook" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openMacbookPopUp" prefHeight="191.0" prefWidth="194.0" styleClass="macbook" stylesheets="@styles.css" />
+                                          <Label layoutX="79.0" layoutY="205.0" prefHeight="31.0" prefWidth="165.0" text="Macbook Air 13”">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="117.0" layoutY="236.0" text="\$1499.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button fx:id="iphone13" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openXperiaPopUp" prefHeight="191.0" prefWidth="194.0" styleClass="sonyphone" stylesheets="@styles.css" />
+                                          <Label layoutX="92.0" layoutY="205.0" prefHeight="31.0" prefWidth="139.0" text="Sony Xperia 1 ">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="123.0" layoutY="241.0" text="\$869.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="278.0" prefWidth="323.0">
+                                       <children>
+                                          <Button fx:id="iphone23" layoutX="65.0" layoutY="14.0" mnemonicParsing="false" onAction="#openXboxSPopUp" prefHeight="191.0" prefWidth="194.0" styleClass="xboxs" stylesheets="@styles.css" />
+                                          <Label layoutX="92.0" layoutY="205.0" prefHeight="31.0" prefWidth="139.0" text="Xbox Series S">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="123.0" layoutY="241.0" text="\$299.99">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
