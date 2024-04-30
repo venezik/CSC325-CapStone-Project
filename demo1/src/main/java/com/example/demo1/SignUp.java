@@ -6,9 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
+import com.google.firebase.auth.UserRecord;
+
 
 public class SignUp {
     @FXML
@@ -16,6 +22,15 @@ public class SignUp {
 
     @FXML
     private Button signButton;
+
+    @FXML
+    private TextField password;
+
+    @FXML
+    private TextField password1;
+
+    @FXML
+    private TextField userNameTf;
 
 
     @FXML
@@ -35,28 +50,53 @@ public class SignUp {
 
     @FXML
     private void setSignUpButton() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("CONFIRMATION");
-        alert.setHeaderText(null);
-        alert.setContentText("Sign up Successful!");
-        alert.showAndWait();
 
-            try {
-                // Load the FXML file for the new main screen
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("newMainScreen.fxml"));
-                Parent root = loader.load();
+        String email = password.getText();
+        String password = password1.getText();
 
-                // Get the current stage
-                Stage stage = (Stage) signButton.getScene().getWindow();
+        // Regular expressions for email and password restrictions
+        String emailIsValid = "[a-z0-9]+@[a-z0-9]+\\.[a-z]{2,4}";
+        String passwordIsValid = "^.{6,}$"; // Password should be at least 6 characters long
 
-                // Set the scene of the current stage to the new main screen scene
-                Scene scene = new Scene(root, 1200,750);
-                stage.setScene(scene);
-                stage.show();
-            } catch (IOException e) {
-                e.printStackTrace();
-                // Handle the exception (e.g., show an error message)
-            }
+        // Check if email and password meet the required format
+        if (!email.matches(emailIsValid)) {
+            showAlert("Invalid Email", "\n Email must follow string1@string2.domain format");
+            return;
         }
 
+        if (!password.matches(passwordIsValid)) {
+            showAlert("Invalid Password", "Password should be 6 characters long.");
+            return;
+        }
+
+        try {
+            // Create a user with the given email and password
+            UserRecord.CreateRequest request = new UserRecord.CreateRequest()
+                    .setEmail(email)
+                    .setPassword(password);
+            UserRecord userRecord = FirebaseAuth.getInstance().createUser(request);
+
+            // User created successfully
+            showAlert("Sign Up Successful", "User created with UID: " + userRecord.getUid());
+
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("newMainScreen.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) signButton.getScene().getWindow();
+            Scene scene = new Scene(root, 1200, 750);
+            stage.setScene(scene);
+            stage.show();
+        } catch (FirebaseAuthException | IOException e) {
+            // Error creating user or navigating to the new main screen
+            showAlert("Sign Up Failed", "Error: " + e.getMessage());
+        }
+    }
+
+    private void showAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
 }

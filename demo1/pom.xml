@@ -12,6 +12,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.10.0</junit.version>
+        <!-- Define a property for Firebase Admin SDK version -->
+        <firebase-admin.version>8.0.0</firebase-admin.version>
+        <!-- Define a property for Google Auth Library version -->
+        <google-auth.version>1.2.3</google-auth.version>
     </properties>
 
     <dependencies>
@@ -25,6 +29,42 @@
             <artifactId>javafx-fxml</artifactId>
             <version>21</version>
         </dependency>
+
+        <!-- Add Firebase Admin SDK dependency -->
+        <dependency>
+            <groupId>com.google.firebase</groupId>
+            <artifactId>firebase-admin</artifactId>
+            <version>9.2.0</version>
+        </dependency>
+
+        <!-- Add Google Auth Library dependency -->
+        <dependency>
+            <groupId>com.google.auth</groupId>
+            <artifactId>google-auth-library-oauth2-http</artifactId>
+            <version>1.20.0</version>
+        </dependency>
+
+        <!-- Logback dependency -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.5.3</version> <!-- Adjust version as needed -->
+        </dependency>
+
+        <!-- org.json dependency for JSON parsing -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20240303</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-firestore</artifactId>
+            <version> 3.20.0 </version> <!-- Replace with the latest version -->
+        </dependency>
+
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
