@@ -37,8 +37,8 @@
                         <Font size="33.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="login" layoutX="55.0" layoutY="128.0" prefHeight="47.0" prefWidth="275.0" promptText="Username (Type anything)" />
-                  <TextField fx:id="password" layoutX="55.0" layoutY="206.0" prefHeight="47.0" prefWidth="275.0" promptText="Password (Type anything)" />
+                  <TextField fx:id="login" layoutX="55.0" layoutY="128.0" prefHeight="47.0" prefWidth="275.0" promptText="Username" />
+                  <TextField fx:id="password" layoutX="55.0" layoutY="206.0" prefHeight="47.0" prefWidth="275.0" promptText="Password" />
                   <Button fx:id="loginButton" layoutX="55.0" layoutY="273.0" mnemonicParsing="false" onAction="#setLoginButton" prefHeight="47.0" prefWidth="272.0" text="Log In" />
                   <Label layoutX="11.0" layoutY="92.0" prefHeight="17.0" prefWidth="405.0" style="-fx-text-fill: black;" text="Comment: Dont leave textfields empty, log in button will prompt alert" />
                </children>
