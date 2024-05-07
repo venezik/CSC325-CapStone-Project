@@ -55,8 +55,9 @@ public class SignUp {
         String password = password1.getText();
 
         // Regular expressions for email and password restrictions
-        String emailIsValid = "[a-z0-9]+@[a-z0-9]+\\.[a-z]{2,4}";
-        String passwordIsValid = "^.{6,}$"; // Password should be at least 6 characters long
+        String emailIsValid = "[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,4}";
+
+        String passwordIsValid = "^.{6,}$"; // Password should be exactly 6 characters long
 
         // Check if email and password meet the required format
         if (!email.matches(emailIsValid)) {
@@ -79,7 +80,7 @@ public class SignUp {
             // User created successfully
             showAlert("Sign Up Successful", "User created with UID: " + userRecord.getUid());
 
-
+            // Navigate to the new main screen
             FXMLLoader loader = new FXMLLoader(getClass().getResource("newMainScreen.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) signButton.getScene().getWindow();
@@ -91,6 +92,7 @@ public class SignUp {
             showAlert("Sign Up Failed", "Error: " + e.getMessage());
         }
     }
+
 
     private void showAlert(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

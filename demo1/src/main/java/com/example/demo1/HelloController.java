@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -60,10 +61,7 @@ public class HelloController {
     @FXML
     private Button cart;
 
-    @FXML
-    protected void initialize() {
-        // Initialization code
-    }
+
 
     /**
      * Switches to the login page.
